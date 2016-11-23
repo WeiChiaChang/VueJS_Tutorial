@@ -81,7 +81,7 @@
                 })
         }, 500),
         lookupEndingZip: _.debounce(function() {
-          var app = this
+          var app = this  // 這個不加上會噴錯！使用 this 去抓當下的 object
           app.endingCity = "Searching..."
           axios.get('http://ziptasticapi.com/' + app.endingZip)
                 .then(function (response) {
