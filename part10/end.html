@@ -69,6 +69,7 @@
         }
       },
       methods: {
+        // _.debounce 是 lodash 這個 library 提供的方法，當使用者停頓了 500 毫秒方會執行。
         lookupStartingZip: _.debounce(function() {
           var app = this
           app.startingCity = "Searching..."
